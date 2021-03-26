@@ -1,13 +1,14 @@
 {
-"shell-version": [
+  "description": "Allows to trigger Activities overview when putting the mouse on bottom of the screen.",
+  "gettext-domain": "bottomtriggersactivities",
+  "name": "Bottom triggers activities",
+  "original-author": "papjul",
+  "shell-version": [
     "3.36",
-    "3.38"
-],
-"uuid": "dash-to-dock@micxgx.gmail.com",
-"name": "Dash to Dock",
-"description": "A dock for the Gnome Shell. This extension moves the dash out of the overview transforming it in a dock for an easier launching of applications and a faster switching between windows and desktops. Side and bottom placement options are available.",
-"original-author": "micxgx@gmail.com",
-"url": "https://micheleg.github.io/dash-to-dock/",
-"gettext-domain": "dashtodock",
-"version": 69
+    "3.38",
+    "40"
+  ],
+  "url": "https://github.com/papjul/bottom-triggers-activities",
+  "uuid": "bottom-triggers-activities@papjul",
+  "version": 69
 }

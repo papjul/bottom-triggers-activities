@@ -2,20 +2,12 @@
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
-const Docking = Me.imports.docking;
-
-// We declare this with var so it can be accessed by other extensions in
-// GNOME Shell 3.26+ (mozjs52+).
-var dockManager;
-
-function init() {
-    ExtensionUtils.initTranslations('dashtodock');
-}
+const BottomTriggersActivities = Me.imports.bottomTriggersActivities;
 
 function enable() {
-    new Docking.DockManager();
+    new BottomTriggersActivities.BottomTriggersActivitiesManager();
 }
 
 function disable() {
-    dockManager.destroy();
+    BottomTriggersActivities.destroy();
 }
