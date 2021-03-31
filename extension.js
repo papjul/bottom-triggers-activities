@@ -21,7 +21,7 @@ class BottomTriggersActivitiesManager {
 
         // Configuration
         this._position = St.Side.BOTTOM;
-        this._showDelay = 0.25;
+        this._toggleDelay = 0.25;
 
         // Put trigger on the selected monitor
         this._monitorIndex = Main.layoutManager.primaryIndex;
@@ -62,7 +62,7 @@ class BottomTriggersActivitiesManager {
 
                 this._dockDwellTimeoutId = GLib.timeout_add(
                     GLib.PRIORITY_DEFAULT,
-                    this._showDelay * 1000,
+                    this._toggleDelay * 1000,
                     this._dockDwellTimeout.bind(this));
                 GLib.Source.set_name_by_id(this._dockDwellTimeoutId, '[dash-to-dock] this._dockDwellTimeout');
             }
@@ -109,8 +109,8 @@ class BottomTriggersActivitiesManager {
      * handler for mouse pressure sensed
      */
     _onPressureSensed() {
-        if (Main.overview.visibleTarget)
-            return;
+        /*if (Main.overview.visibleTarget)
+            return;*/
 
         // In case the mouse move away from the dock area before hovering it, in such case the leave event
         // would never be triggered and the dock would stay visible forever.
@@ -124,13 +124,7 @@ class BottomTriggersActivitiesManager {
             }
         });
 
-        this._show();
-    }
-
-    _show() {
-        if (!(Main.overview.visible)) {
-            Main.overview.show();
-        }
+        Main.overview.toggle();
     }
 
     static getDefault() {

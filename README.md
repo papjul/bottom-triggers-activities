@@ -11,14 +11,14 @@ I may backport fixes from upstream but I don't intend to add any new feature or 
 In terminal:
 ```
 cd ~/.local/share/gnome-shell/extensions/
-git clone https://github.com/papjul/bottom-triggers-activities bottom-triggers-activities@papjul
+git clone https://github.com/papjul/bottom-triggers-activities bottom-triggers-activities\@papjul
 ```
 
 Alternatively, download ZIP from GitHub master and unzip in ~/.local/share/gnome-shell/extensions/bottom-triggers-activities@papjul/ (you need to create the last folder).
 
 To update:
 ```
-cd ~/.local/share/gnome-shell/extensions/bottom-triggers-activities@papjul/
+cd ~/.local/share/gnome-shell/extensions/bottom-triggers-activities\@papjul/
 git pull
 ```
 
