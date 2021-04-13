@@ -100,31 +100,8 @@ class BottomTriggersActivitiesManager {
         if (currentUserTime != this._dockDwellUserTime)
             return GLib.SOURCE_REMOVE;
 
-        // Reuse the pressure version function, the logic is the same
-        this._onPressureSensed();
-        return GLib.SOURCE_REMOVE;
-    }
-
-    /**
-     * handler for mouse pressure sensed
-     */
-    _onPressureSensed() {
-        /*if (Main.overview.visibleTarget)
-            return;*/
-
-        // In case the mouse move away from the dock area before hovering it, in such case the leave event
-        // would never be triggered and the dock would stay visible forever.
-        this._triggerTimeoutId = GLib.timeout_add(GLib.PRIORITY_DEFAULT, 250, () => {
-            if (!this._isPointerInZone()) {
-                this._hoverChanged();
-                return GLib.SOURCE_REMOVE;
-            }
-            else {
-                return GLib.SOURCE_CONTINUE;
-            }
-        });
-
         Main.overview.toggle();
+        return GLib.SOURCE_REMOVE;
     }
 
     static getDefault() {
