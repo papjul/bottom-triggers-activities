@@ -1,4 +1,7 @@
 # Bottom Triggers Activities Overview
+
+**DEPRECATION NOTICE**: This extension will no longer be maintained. Please migrate to another extension such as https://github.com/jdoda/hotedge
+
 This is a fork of Dash to Dock which allows to toggle Activities overview when the mouse reaches the bottom edge of the screen.
 It adds support for Gnome Shell 40 and is mainly aimed at Gnome Shell 40 users to reduce mouse travel.
 
